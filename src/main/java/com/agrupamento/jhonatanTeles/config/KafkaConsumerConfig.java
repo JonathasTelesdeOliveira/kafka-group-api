@@ -1,8 +1,6 @@
 package com.agrupamento.jhonatanTeles.config;
 
-import com.agrupamento.jhonatanTeles.out.TransacaoKafkaDTO;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.agrupamento.jhonatanTeles.dto.out.TransacaoKafkaDTO;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
@@ -51,7 +49,3 @@ public class KafkaConsumerConfig {
         return factory;
     }
 }
-
-
-
-

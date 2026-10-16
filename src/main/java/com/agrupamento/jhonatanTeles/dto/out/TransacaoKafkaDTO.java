@@ -1,12 +1,15 @@
-package com.agrupamento.jhonatanTeles.out;
+package com.agrupamento.jhonatanTeles.dto.out;
 
 import com.agrupamento.jhonatanTeles.enums.Lado;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Data
 @Builder
 @AllArgsConstructor
@@ -15,6 +18,7 @@ public class TransacaoKafkaDTO {
     @JsonProperty("id")
     private Long id;
     @JsonProperty("dataSped")
+    @JsonAlias({"data_sped", "dataCompra", "data"})
     private LocalDateTime dataSped;
     @JsonProperty("tradeId")
     private Integer tradeId;
